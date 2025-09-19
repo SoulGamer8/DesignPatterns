@@ -1,6 +1,6 @@
 {
-    "name": "Logic",
-    "rootNamespace": "Nevermindever.Enemy.Logic",
+    "name": "Managers",
+    "rootNamespace": "Nevermindever.Enemy.Managers",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],

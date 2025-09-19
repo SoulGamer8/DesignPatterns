@@ -1,0 +1,17 @@
+{
+    "name": "Logic",
+    "rootNamespace": "Nevermindever.Enemy.Logic",
+    "references": [
+        "GUID:ae04d4271237dd94a924683b6d64b0a8",
+        "Interface"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
