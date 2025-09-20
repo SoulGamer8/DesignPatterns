@@ -6,7 +6,7 @@ namespace Nevermindever.Enemy.Logic {
         private float _attackCooldown ;
         private float _lastAttackTime;
         
-        protected MeleeEnemy(Sprite sprite, int damage, int health, float fireRate, Animator animator,float fireRange,float attackCooldown)
+        public MeleeEnemy(Sprite sprite, int damage, int health, float fireRate, Animator animator,float fireRange,float attackCooldown)
             : base(sprite, damage, health, fireRate, animator) {
             _fireRange = fireRange;
             _attackCooldown = attackCooldown;

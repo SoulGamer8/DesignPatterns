@@ -1,7 +1,10 @@
 {
-    "name": "Managers",
+    "name": "EnemyManagers",
     "rootNamespace": "Nevermindever.Enemy.Managers",
-    "references": [],
+    "references": [
+        "GUID:928adf9b6c3bad24e8778f953e4f078d",
+        "GUID:a2797116a04199d49972dd6dbbc69641"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

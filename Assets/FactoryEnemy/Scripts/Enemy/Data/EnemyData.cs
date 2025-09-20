@@ -8,13 +8,7 @@ namespace Nevermindever.Enemy.Data{
        public int damage;
        public float fireRate;
        public Animator animator;
+       
        // Add some staff like defense all what you need 
-    }
-
-    public enum enemyType
-    {
-        Melee,
-        Ranged,
-        Magic
     }
 }

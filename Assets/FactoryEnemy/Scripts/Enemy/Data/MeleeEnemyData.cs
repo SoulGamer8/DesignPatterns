@@ -6,6 +6,5 @@ namespace Nevermindever.Enemy.Data {
         public float attackCooldown ;
         public float fireRange;
         // here you can add some paraterther  what only use in Melee enemy like shield 
-        public enemyType type = enemyType.Melee; 
     }
 }

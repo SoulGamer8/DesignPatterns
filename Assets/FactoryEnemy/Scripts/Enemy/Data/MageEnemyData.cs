@@ -7,8 +7,5 @@ namespace Nevermindever.Enemy.Data {
         public int maxMana;
         public int manaRegen;
         public List<string> spellList; // its just example
-        
-        public enemyType type = enemyType.Magic;
-
     }
 }
