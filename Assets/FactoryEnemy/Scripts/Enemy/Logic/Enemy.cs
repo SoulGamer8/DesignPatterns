@@ -1,39 +1,25 @@
-using System;
+using Nevermindever.Interface;
 using UnityEngine;
 
 namespace Nevermindever.Enemy.Logic {
-    public class Enemy {
-        public Sprite Sprite{get; private set;}
+    public abstract class Enemy {
+        private Transform _playerTransform;
+        private IDamageable _playerDamageable;
         private int _damage;
-        private int _health;
         private float _fireRate;
         private Animator _animator;
 
-        public event Action OnDeath;
         
-        protected Enemy(Sprite sprite, int damage,int health, float fireRate, Animator animator) {
-            Sprite = sprite;
+        protected Enemy(int damage, float fireRate, Animator animator, Transform playerTransform, IDamageable playerDamageable) {
             _damage = damage;
-            _health = health;
             _fireRate = fireRate;
             _animator = animator;
-            OnDeath += Death;
-        }
-        
-        public void TakeDamage(int damage) {
-            _health -= damage;
-            if (_health <= 0) 
-                OnDeath?.Invoke();
-            
+            _playerTransform = playerTransform;
+            _playerDamageable = playerDamageable;
         }
 
-        public void DealDamage(int damage) {
-            
-        }
+        public abstract void Attack();
+        public abstract void Move();
 
-        private void Death() {
-            // here you can use you animation
-        }
-        
     }
 }

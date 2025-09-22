@@ -1,26 +1,23 @@
+using Nevermindever.Interface;
 using UnityEngine;
 
-namespace Nevermindever.Enemy.Logic
-{
+namespace Nevermindever.Enemy.Logic {
     public class RangeEnemy : Enemy {
         private float _fireRange;
         private float _attackCooldown ;
         private float _lastAttackTime;
         
-        public RangeEnemy(Sprite sprite, int damage, int health, float fireRate, Animator animator,float fireRange,float attackCooldown)
-            : base(sprite, damage, health, fireRate, animator) {
+        public RangeEnemy( int damage, float fireRate, Animator animator, Transform playerTransform, IDamageable playerDamageable, float fireRange,float attackCooldown)
+            : base(damage, fireRate, animator,playerTransform,playerDamageable) {
             _fireRange = fireRange;
             _attackCooldown = attackCooldown;
         }
-        
-        public bool CanAttack() {
-            return Time.time - _lastAttackTime >= _attackCooldown;
+        public override void Attack() {
+            //Here you can make your attack for this type enemy  and use playerDamageable for damage player
         }
-    
-        public void PerformAttack() {
-            if (!CanAttack()) return;
-        
-            _lastAttackTime = Time.time;
+
+        public override void Move() {
+            //Here write how this type enemy would be move 
         }
     }
 }
