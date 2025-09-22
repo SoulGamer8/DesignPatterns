@@ -8,8 +8,8 @@ namespace Nevermindever.Enemy.Logic {
         private int _manaRegen;
         private List<string> _spellList;
         
-        public MageEnemy(int damage, float fireRate, Animator animator, Transform playerTransform, IDamageable playerDamageable,int maxMana,int manaRegen,List<string> spellList) 
-            : base( damage, fireRate, animator,playerTransform,playerDamageable) {
+        public MageEnemy(int damage, float fireRate, Animator animator, IDamageable playerDamageable,int maxMana,int manaRegen,List<string> spellList) 
+            : base( damage, fireRate, animator,playerDamageable) {
             _maxMana = maxMana;
             _manaRegen = manaRegen;
             _spellList = spellList; 
@@ -19,7 +19,7 @@ namespace Nevermindever.Enemy.Logic {
             //Here you can make your attack for this type enemy  and use playerDamageable for damage player
         }
 
-        public override void Move() {
+        public override void Move(Transform playerTransform) {
             //Here write how this type enemy would be move 
         }
     }

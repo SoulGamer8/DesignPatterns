@@ -10,8 +10,9 @@ namespace Nevermindever.Enemy.Logic {
         private Enemy _enemy;
         private Health _health;
         
-        public void Initialize(Enemy enemy,Transform playerTransform, Sprite sprite) {
+        public void Initialize(Enemy enemy,Health health,Transform playerTransform, Sprite sprite) {
             _enemy = enemy;
+            _health = health;
             _playerTransform = playerTransform;
             _health.OnDeath += Death;
             SetupVisual(sprite);
@@ -22,7 +23,7 @@ namespace Nevermindever.Enemy.Logic {
         }
 
         private void Update() {
-            _enemy.Move();
+            _enemy.Move(_playerTransform);
         }
         
         public void TakeDamage(int damage) {

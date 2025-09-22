@@ -1,64 +1,37 @@
 using System;
 using Nevermindever.Enemy.Data;
 using Nevermindever.Enemy.Logic;
+using Nevermindever.Interface;
 using UnityEngine;
+using UnityEngine.TextCore;
 
 namespace Nevermindever.Enemy.Managers {
     public class Spawner : MonoBehaviour {
         [SerializeField] private GameObject _prefab;
         [SerializeField] private Transform _playerTransform;
+        [SerializeField] private IDamageable _playerIDamageable;
         [SerializeField] private EnemyData _enemyData;
+        
+        private EnemyFactory _factory;
 
-
-        private void Start() {
-            CreatEnemy(_enemyData);
+        private void Awake() {
+            _factory = new EnemyFactory(_prefab, _playerTransform,_playerIDamageable); 
         }
 
-
-        public void CreatEnemy(EnemyData enemyData) {
-            //TODO Ask object pool first 
-            
-            switch (enemyData) {
-                case MeleeEnemyData meleeData:
-                    CreatMeleeEnemy(meleeData);
-                    break;
-                case MageEnemyData magicData:
-                    CreatMageEnemy(magicData);
-                    break;
-                case RangeEnemyData rangedData:
-                    CreatRangeEnemy(rangedData);
-                    break;
-                default:
-                    Debug.LogError("Unknown enemy type");
-                    break;
-            }
+        public void SpawnEnemy(EnemyData data, Vector3 spawnPosition) {
+            //TODO ask pool about object first 
+            EnemyComponent enemy = _factory.SpawnEnemy(data,spawnPosition,Quaternion.identity);
+            RegisterInObserver(enemy);
         }
-            
 
-        private void CreatMeleeEnemy(MeleeEnemyData enemyData) {
-            GameObject enemyGameObject  = Instantiate(_prefab, _playerTransform.position, Quaternion.identity);
-            MeleeEnemy enemy = new MeleeEnemy(enemyData.damage,enemyData.fireRate,
-                enemyData.animator,enemyData.fireRange,enemyData.attackCooldown);
-            //TODO Register in Observer
-            enemyGameObject.GetComponent<EnemyComponent>().Initialize(enemy,_playerTransform,enemyData.sprite);
+        public void SpawnWaveEnemy() {
+            
         }
         
-        private void CreatRangeEnemy(RangeEnemyData enemyData) {
-            GameObject enemyGameObject  = Instantiate(_prefab, _playerTransform.position, Quaternion.identity);
-            RangeEnemy enemy = new RangeEnemy(enemyData.damage,enemyData.fireRate,
-                enemyData.animator,enemyData.firaRange,enemyData.attackCooldown);
-            //TODO Add projectile fabric 
-            //TODO Register in Observer
-            enemyGameObject.GetComponent<EnemyComponent>().Initialize(enemy,_playerTransform,enemyData.sprite);
+
+        private void RegisterInObserver(EnemyComponent enemy) {
+            // Maybe in next article I explain Observer and Object Pool
         }
-        
-        private void CreatMageEnemy(MageEnemyData enemyData) {
-            GameObject enemyGameObject  = Instantiate(_prefab, _playerTransform.position, Quaternion.identity);
-            MageEnemy enemy = new MageEnemy(enemyData.damage,enemyData.fireRate,
-                enemyData.animator,enemyData.maxMana,enemyData.manaRegen,enemyData.spellList);
-            //TODO CreatSpell List 
-            //TODO Register in Observer
-            enemyGameObject.GetComponent<EnemyComponent>().Initialize(enemy,_playerTransform,enemyData.sprite);
-        }
+
     }
 }

@@ -7,8 +7,8 @@ namespace Nevermindever.Enemy.Logic {
         private float _attackCooldown ;
         private float _lastAttackTime;
         
-        public RangeEnemy( int damage, float fireRate, Animator animator, Transform playerTransform, IDamageable playerDamageable, float fireRange,float attackCooldown)
-            : base(damage, fireRate, animator,playerTransform,playerDamageable) {
+        public RangeEnemy( int damage, float fireRate, Animator animator,IDamageable playerDamageable, float fireRange,float attackCooldown)
+            : base(damage, fireRate, animator,playerDamageable) {
             _fireRange = fireRange;
             _attackCooldown = attackCooldown;
         }
@@ -16,7 +16,7 @@ namespace Nevermindever.Enemy.Logic {
             //Here you can make your attack for this type enemy  and use playerDamageable for damage player
         }
 
-        public override void Move() {
+        public override void Move(Transform playerTransform) {
             //Here write how this type enemy would be move 
         }
     }

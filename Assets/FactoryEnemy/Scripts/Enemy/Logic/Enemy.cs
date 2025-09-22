@@ -10,16 +10,15 @@ namespace Nevermindever.Enemy.Logic {
         private Animator _animator;
 
         
-        protected Enemy(int damage, float fireRate, Animator animator, Transform playerTransform, IDamageable playerDamageable) {
+        protected Enemy(int damage, float fireRate, Animator animator, IDamageable playerDamageable) {
             _damage = damage;
             _fireRate = fireRate;
             _animator = animator;
-            _playerTransform = playerTransform;
             _playerDamageable = playerDamageable;
         }
 
         public abstract void Attack();
-        public abstract void Move();
+        public abstract void Move(Transform playerTransform);
 
     }
 }
