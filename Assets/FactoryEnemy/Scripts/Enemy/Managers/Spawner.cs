@@ -27,10 +27,9 @@ namespace Nevermindever.Enemy.Managers {
 
         public void SpawnEnemyAtRandomPosition(EnemyData data) {
             Vector2 randomSpawnPosition = new Vector2(
-                Random.Range(0f, Screen.width),
-                Random.Range(0f, Screen.height));
+                Random.Range(-8f, 8),
+                Random.Range(-5f, 5));
             SpawnEnemy(data, randomSpawnPosition);
-            
         }
         
         public void SpawnEnemy(EnemyData data,Vector2 spawnoPosition) {

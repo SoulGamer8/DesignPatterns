@@ -16,7 +16,7 @@ namespace Nevermindever.Enemy.Managers {
         }
         
         public EnemyComponent SpawnEnemy(EnemyData data, Vector3 position, Quaternion rotation) {
-            GameObject enemyGameObject  = Object.Instantiate(_prefab, _playerTransform.position, Quaternion.identity);
+            GameObject enemyGameObject  = Object.Instantiate(_prefab, position, rotation);
             EnemyComponent enemyComponent = enemyGameObject.GetComponent<EnemyComponent>();
             Health health = new Health(data.health);
             Logic.Enemy enemy = null;
@@ -40,18 +40,18 @@ namespace Nevermindever.Enemy.Managers {
             
 
         private MeleeEnemy CreateMeleeEnemy(MeleeEnemyData enemyData) {
-            return new MeleeEnemy(enemyData.damage,enemyData.fireRate,
-                enemyData.animator,_playerIDamageable,enemyData.fireRange,enemyData.attackCooldown);
+            return new MeleeEnemy(enemyData.speed,enemyData.damage,enemyData.fireRate,
+                enemyData.animator,_playerIDamageable,enemyData.escapeRange,enemyData.fireRange,enemyData.attackCooldown);
         }
         
         private RangeEnemy CreateRangeEnemy(RangeEnemyData enemyData) {
-            return new RangeEnemy(enemyData.damage,enemyData.fireRate,
-                enemyData.animator,_playerIDamageable,enemyData.firaRange,enemyData.attackCooldown);
+            return new RangeEnemy(enemyData.speed,enemyData.damage,enemyData.fireRate,
+                enemyData.animator,_playerIDamageable,enemyData.escapeRange,enemyData.fireRange,enemyData.attackCooldown);
         }
         
         private MageEnemy CreateMageEnemy(MageEnemyData enemyData) {
-            return  new MageEnemy(enemyData.damage,enemyData.fireRate,
-                enemyData.animator,_playerIDamageable,enemyData.maxMana,enemyData.manaRegen,enemyData.spellList);
+            return  new MageEnemy(enemyData.speed,enemyData.damage,enemyData.fireRate,
+                enemyData.animator,_playerIDamageable,enemyData.fireRange,enemyData.escapeRange,enemyData.maxMana,enemyData.manaRegen,enemyData.spellList);
         }
     }
 }

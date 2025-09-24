@@ -3,13 +3,11 @@ using UnityEngine;
 
 namespace Nevermindever.Enemy.Logic {
     public class MeleeEnemy : Enemy {
-        private float _fireRange;
         private float _attackCooldown ;
         private float _lastAttackTime;
         
-        public MeleeEnemy( int damage, float fireRate, Animator animator, IDamageable playerDamageable,float fireRange,float attackCooldown)
-            : base(damage, fireRate, animator,playerDamageable) {
-            _fireRange = fireRange;
+        public MeleeEnemy(float speed, int damage, float fireRate, Animator animator, IDamageable playerDamageable,float escapeRange,float fireRange,float attackCooldown)
+            : base(speed,damage, fireRate, animator,playerDamageable,fireRange,escapeRange) {
             _attackCooldown = attackCooldown;
         }
 
@@ -17,8 +15,11 @@ namespace Nevermindever.Enemy.Logic {
             //Here you can make your attack for this type enemy  and use playerDamageable for damage player
         }
 
-        public override void Move(Transform playerTransform) {
-            //Here write how this type enemy would be move 
+        public override void Move(Transform enemy,Transform playerTransform) {
+            if(Vector2.Distance(enemy.position,playerTransform.position)>_fireRange)
+                enemy.position = Vector2.MoveTowards(enemy.position,playerTransform.position,_speed *Time.deltaTime);
+
+            
         }
     }
 }

@@ -3,22 +3,27 @@ using UnityEngine;
 
 namespace Nevermindever.Enemy.Logic {
     public abstract class Enemy {
-        private Transform _playerTransform;
-        private IDamageable _playerDamageable;
-        private int _damage;
-        private float _fireRate;
-        private Animator _animator;
-
+        protected IDamageable _playerDamageable;
+        protected int _damage;
+        protected float _speed;
+        protected float _fireRate;
+        protected Animator _animator;
+        protected float _fireRange;
+        protected float _escapeRange;
         
-        protected Enemy(int damage, float fireRate, Animator animator, IDamageable playerDamageable) {
+        protected Enemy(float speed,int damage, float fireRate, Animator animator, IDamageable playerDamageable,float fireRange,float escapeRange) {
+            _speed = speed;
             _damage = damage;
             _fireRate = fireRate;
             _animator = animator;
             _playerDamageable = playerDamageable;
+            _fireRange  = fireRate;
+            _escapeRange  = fireRate;
+            
         }
 
         public abstract void Attack();
-        public abstract void Move(Transform playerTransform);
+        public abstract void Move(Transform enemy,Transform playerTransform);
 
     }
 }

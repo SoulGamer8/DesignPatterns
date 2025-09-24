@@ -23,7 +23,7 @@ namespace Nevermindever.Enemy.Logic {
         }
 
         private void Update() {
-            _enemy.Move(_playerTransform);
+            _enemy.Move(gameObject.transform,_playerTransform);
         }
         
         public void TakeDamage(int damage) {
@@ -31,6 +31,7 @@ namespace Nevermindever.Enemy.Logic {
         }
         
         private void Death() {
+            _health.OnDeath -= Death;
             //TODO Add animation and some cool VFX and SFX    
         }
         

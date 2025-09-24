@@ -8,6 +8,8 @@ namespace Nevermindever.Enemy.Data{
        public int damage;
        public float speed;
        public float fireRate;
+       public float fireRange;
+       public float escapeRange; 
        public Animator animator;
        
        
