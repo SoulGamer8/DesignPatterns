@@ -10,16 +10,16 @@ namespace Nevermindever.Enemy.Logic {
         private Enemy _enemy;
         private Health _health;
         
-        public void Initialize(Enemy enemy,Health health,Transform playerTransform, Sprite sprite) {
+        public void Initialize(Enemy enemy,Health health,Transform playerTransform, Color color) {
             _enemy = enemy;
             _health = health;
             _playerTransform = playerTransform;
             _health.OnDeath += Death;
-            SetupVisual(sprite);
+            SetupVisual(color);
         }
         
-        private void SetupVisual(Sprite sprite) {
-            _spriteRenderer.sprite = sprite;
+        private void SetupVisual(Color color) {
+            _spriteRenderer.color = color;
         }
 
         private void Update() {

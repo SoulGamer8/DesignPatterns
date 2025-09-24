@@ -22,39 +22,36 @@ namespace Nevermindever.Enemy.Managers {
             Logic.Enemy enemy = null;
             switch (data) {
                 case MeleeEnemyData meleeData:
-                    enemy= CreatMeleeEnemy(meleeData);
+                    enemy= CreateMeleeEnemy(meleeData);
                     break;
                 case MageEnemyData magicData:
-                    enemy = CreatMageEnemy(magicData);
+                    enemy = CreateMageEnemy(magicData);
                     break;
                 case RangeEnemyData rangedData:
-                    enemy =  CreatRangeEnemy(rangedData);
+                    enemy =  CreateRangeEnemy(rangedData);
                     break;
                 default:
                     Debug.LogError("Unknown enemy type");
                     break;
             }
-            enemyComponent.Initialize(enemy,health,_playerTransform,data.sprite);
+            enemyComponent.Initialize(enemy,health,_playerTransform,data.color);
             return enemyComponent; 
         }
             
 
-        private MeleeEnemy CreatMeleeEnemy(MeleeEnemyData enemyData) {
-            MeleeEnemy enemy = new MeleeEnemy(enemyData.damage,enemyData.fireRate,
+        private MeleeEnemy CreateMeleeEnemy(MeleeEnemyData enemyData) {
+            return new MeleeEnemy(enemyData.damage,enemyData.fireRate,
                 enemyData.animator,_playerIDamageable,enemyData.fireRange,enemyData.attackCooldown);
-            return enemy;
         }
         
-        private RangeEnemy CreatRangeEnemy(RangeEnemyData enemyData) {
-            RangeEnemy enemy = new RangeEnemy(enemyData.damage,enemyData.fireRate,
+        private RangeEnemy CreateRangeEnemy(RangeEnemyData enemyData) {
+            return new RangeEnemy(enemyData.damage,enemyData.fireRate,
                 enemyData.animator,_playerIDamageable,enemyData.firaRange,enemyData.attackCooldown);
-            return enemy;
         }
         
-        private MageEnemy CreatMageEnemy(MageEnemyData enemyData) {
-            MageEnemy enemy = new MageEnemy(enemyData.damage,enemyData.fireRate,
+        private MageEnemy CreateMageEnemy(MageEnemyData enemyData) {
+            return  new MageEnemy(enemyData.damage,enemyData.fireRate,
                 enemyData.animator,_playerIDamageable,enemyData.maxMana,enemyData.manaRegen,enemyData.spellList);
-            return enemy;
         }
     }
 }

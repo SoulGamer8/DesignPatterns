@@ -4,23 +4,38 @@ using Nevermindever.Enemy.Logic;
 using Nevermindever.Interface;
 using UnityEngine;
 using UnityEngine.TextCore;
+using Random = UnityEngine.Random;
 
 namespace Nevermindever.Enemy.Managers {
     public class Spawner : MonoBehaviour {
         [SerializeField] private GameObject _prefab;
-        [SerializeField] private Transform _playerTransform;
-        [SerializeField] private IDamageable _playerIDamageable;
-        [SerializeField] private EnemyData _enemyData;
+        [SerializeField] private GameObject _player;
+        
+        
         
         private EnemyFactory _factory;
 
         private void Awake() {
-            _factory = new EnemyFactory(_prefab, _playerTransform,_playerIDamageable); 
+            IDamageable playerIDamageable = _player.GetComponent<IDamageable>();
+            if(playerIDamageable == null)
+                Debug.LogWarning("No IDamageable in spawner");
+            Transform playerTransform = _player.GetComponent<Transform>();
+            if(playerTransform == null)
+                Debug.LogWarning("No player transform in spawner");
+            _factory = new EnemyFactory(_prefab, playerTransform,playerIDamageable); 
         }
 
-        public void SpawnEnemy(EnemyData data, Vector3 spawnPosition) {
+        public void SpawnEnemyAtRandomPosition(EnemyData data) {
+            Vector2 randomSpawnPosition = new Vector2(
+                Random.Range(0f, Screen.width),
+                Random.Range(0f, Screen.height));
+            SpawnEnemy(data, randomSpawnPosition);
+            
+        }
+        
+        public void SpawnEnemy(EnemyData data,Vector2 spawnoPosition) {
             //TODO ask pool about object first 
-            EnemyComponent enemy = _factory.SpawnEnemy(data,spawnPosition,Quaternion.identity);
+            EnemyComponent enemy = _factory.SpawnEnemy(data,spawnoPosition,Quaternion.identity);
             RegisterInObserver(enemy);
         }
 
