@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: MageEnemyData
   m_EditorClassIdentifier: 
   name: Mage
-  sprite: {fileID: 0}
-  health: 10
+  color: {r: 0, g: 0.013520718, b: 1, a: 1}
+  health: 5
   damage: 5
   speed: 2
   fireRate: 1
+  fireRange: 5
+  escapeRange: 3
   animator: {fileID: 0}
-  maxMana: 2
-  manaRegen: 2
+  maxMana: 20
+  manaRegen: 10
   spellList: []
