@@ -1,0 +1,17 @@
+{
+    "name": "EnemyLogicFactory",
+    "rootNamespace": "Nevermindever.Factory.Enemy.Logic",
+    "references": [
+        "GUID:d2f652f3ebc126b409120c4484308745",
+        "GUID:07805d3586ba54348875de16b43c6123"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

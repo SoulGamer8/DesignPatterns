@@ -1,0 +1,16 @@
+{
+    "name": "PlayerFactory",
+    "rootNamespace": "Nevermindever.Factory.Player",
+    "references": [
+        "InterfaceFactory"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

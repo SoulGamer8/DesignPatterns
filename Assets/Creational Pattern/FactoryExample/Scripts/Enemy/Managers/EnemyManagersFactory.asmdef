@@ -1,0 +1,18 @@
+{
+    "name": "EnemyManagersFactory",
+    "rootNamespace": "Nevermindever.Factory.Enemy.Managers",
+    "references": [
+        "GUID:d2f652f3ebc126b409120c4484308745",
+        "GUID:ea39d606e9a6540468ed3944eff0da44",
+        "GUID:07805d3586ba54348875de16b43c6123"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
