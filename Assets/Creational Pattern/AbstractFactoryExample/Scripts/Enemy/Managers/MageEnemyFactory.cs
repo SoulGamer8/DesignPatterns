@@ -23,7 +23,7 @@ namespace Nevermindever.AbstractFactory.Enemy.Managers {
             Health health = new Health(data.health);
             if (data is MageEnemyData mageEnemyData) {
                 MageEnemy enemy = new MageEnemy(mageEnemyData.speed,mageEnemyData.damage,mageEnemyData.fireRate,
-                    mageEnemyData.animator,_playerIDamageable,mageEnemyData.escapeRange,mageEnemyData.fireRange,mageEnemyData.maxMana,mageEnemyData.manaRegen,mageEnemyData.spellList);
+                    mageEnemyData.animator,_playerIDamageable,mageEnemyData.fireRange,mageEnemyData.escapeRange,mageEnemyData.maxMana,mageEnemyData.manaRegen,mageEnemyData.spellList);
                 enemyComponent.Initialize(enemy, health, _playerTransform, mageEnemyData.color);
             }
             else {

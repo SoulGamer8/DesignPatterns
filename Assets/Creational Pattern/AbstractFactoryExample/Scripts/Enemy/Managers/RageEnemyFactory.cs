@@ -23,7 +23,7 @@ namespace Nevermindever.AbstractFactory.Enemy.Managers {
             Health health = new Health(data.health);
             if (data is RangeEnemyData rangeEnemyData) {
                 RangeEnemy enemy = new RangeEnemy(rangeEnemyData.speed,rangeEnemyData.damage,rangeEnemyData.fireRate,
-                rangeEnemyData.animator,_playerIDamageable,rangeEnemyData.escapeRange,rangeEnemyData.fireRange,rangeEnemyData.attackCooldown);
+                rangeEnemyData.animator,_playerIDamageable,rangeEnemyData.fireRange,rangeEnemyData.escapeRange,rangeEnemyData.attackCooldown);
                 enemyComponent.Initialize(enemy, health, _playerTransform, rangeEnemyData.color);
             }
             else {

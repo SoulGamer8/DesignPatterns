@@ -8,7 +8,7 @@ namespace Nevermindever.AbstractFactory.Enemy.Logic {
         private int _manaRegen;
         private List<string> _spellList;
         
-        public MageEnemy(float speed,int damage, float fireRate, Animator animator, IDamageable playerDamageable,float escapeRange,float fireRange,int maxMana,int manaRegen,List<string> spellList) 
+        public MageEnemy(float speed,int damage, float fireRate, Animator animator, IDamageable playerDamageable,float fireRange,float escapeRange,int maxMana,int manaRegen,List<string> spellList) 
             : base(speed,damage, fireRate, animator,playerDamageable,fireRange,escapeRange) {
             _maxMana = maxMana;
             _manaRegen = manaRegen;

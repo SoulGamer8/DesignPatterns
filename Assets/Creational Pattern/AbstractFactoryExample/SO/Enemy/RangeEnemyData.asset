@@ -18,8 +18,8 @@ MonoBehaviour:
   damage: 1
   speed: 2
   fireRate: 2
-  fireRange: 4
-  escapeRange: 3
+  fireRange: 3
+  escapeRange: 2
   animator: {fileID: 0}
   attackCooldown: 0
   projectilePrefab: {fileID: 0}

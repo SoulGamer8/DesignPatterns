@@ -18,7 +18,7 @@ MonoBehaviour:
   damage: 5
   speed: 2
   fireRate: 1
-  fireRange: 5
+  fireRange: 4
   escapeRange: 3
   animator: {fileID: 0}
   maxMana: 20
