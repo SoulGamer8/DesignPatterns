@@ -1,17 +1,13 @@
-using System;
 using Nevermindever.Factory.Enemy.Data;
 using Nevermindever.Factory.Enemy.Logic;
 using Nevermindever.Factory.Interface;
 using UnityEngine;
-using UnityEngine.TextCore;
 using Random = UnityEngine.Random;
 
 namespace Nevermindever.Factory.Enemy.Managers {
     public class Spawner : MonoBehaviour {
         [SerializeField] private GameObject _prefab;
         [SerializeField] private GameObject _player;
-        
-        
         
         private EnemyFactory _factory;
 

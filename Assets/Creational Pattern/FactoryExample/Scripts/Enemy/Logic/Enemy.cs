@@ -17,8 +17,8 @@ namespace Nevermindever.Factory.Enemy.Logic {
             _fireRate = fireRate;
             _animator = animator;
             _playerDamageable = playerDamageable;
-            _fireRange  = fireRate;
-            _escapeRange  = fireRate;
+            _fireRange  = fireRange;
+            _escapeRange  = escapeRange;
             
         }
 

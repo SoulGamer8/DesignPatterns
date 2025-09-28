@@ -6,8 +6,8 @@ namespace Nevermindever.Factory.Enemy.Logic {
         private float _attackCooldown ;
         private float _lastAttackTime;
         
-        public RangeEnemy(float speed, int damage, float fireRate, Animator animator,IDamageable playerDamageable, float escapeRange,float fireRange,float attackCooldown)
-            : base(speed, damage, fireRate, animator, playerDamageable, escapeRange, fireRange) {
+        public RangeEnemy(float speed, int damage, float fireRate, Animator animator,IDamageable playerDamageable, float fireRange,float escapeRange,float attackCooldown)
+            : base(speed, damage, fireRate, animator, playerDamageable, fireRange, escapeRange) {
             _attackCooldown = attackCooldown;
         }
         public override void Attack() {

@@ -6,7 +6,7 @@ namespace Nevermindever.Factory.Enemy.Logic {
         private float _attackCooldown ;
         private float _lastAttackTime;
         
-        public MeleeEnemy(float speed, int damage, float fireRate, Animator animator, IDamageable playerDamageable,float escapeRange,float fireRange,float attackCooldown)
+        public MeleeEnemy(float speed, int damage, float fireRate, Animator animator, IDamageable playerDamageable,float fireRange,float escapeRange,float attackCooldown)
             : base(speed,damage, fireRate, animator,playerDamageable,fireRange,escapeRange) {
             _attackCooldown = attackCooldown;
         }

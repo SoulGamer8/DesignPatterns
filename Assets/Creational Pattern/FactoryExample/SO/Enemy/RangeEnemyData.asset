@@ -9,17 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e03654862714d854fb9071dacb220e90, type: 3}
+  m_Script: {fileID: 11500000, guid: 691aa9e1b7488fe469fb2c2348c28628, type: 3}
   m_Name: RangeEnemyData
   m_EditorClassIdentifier: 
-  name: Range
-  color: {r: 1, g: 0.611645, b: 0, a: 1}
-  health: 5
-  damage: 1
+  name: 
+  color: {r: 1, g: 0.7185304, b: 0, a: 1}
+  health: 0
+  damage: 0
   speed: 2
-  fireRate: 2
-  fireRange: 4
-  escapeRange: 3
+  fireRate: 0
+  fireRange: 3
+  escapeRange: 2
   animator: {fileID: 0}
   attackCooldown: 0
   projectilePrefab: {fileID: 0}

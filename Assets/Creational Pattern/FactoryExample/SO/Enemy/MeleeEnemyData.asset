@@ -9,15 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92006584c83279b4ba6e6341c9150b86, type: 3}
+  m_Script: {fileID: 11500000, guid: a12823eba6b6d0a4d8c097ce3e89583c, type: 3}
   m_Name: MeleeEnemyData
   m_EditorClassIdentifier: 
-  name: Melee
+  name: 
   color: {r: 1, g: 0, b: 0, a: 1}
-  health: 10
-  damage: 2
-  speed: 2
-  fireRate: 1
+  health: 0
+  damage: 0
+  speed: 5
+  fireRate: 0
   fireRange: 1
   escapeRange: 0
   animator: {fileID: 0}

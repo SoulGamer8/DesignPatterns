@@ -42,12 +42,12 @@ namespace Nevermindever.Factory.Enemy.Managers {
 
         private MeleeEnemy CreateMeleeEnemy(MeleeEnemyData enemyData) {
             return new MeleeEnemy(enemyData.speed,enemyData.damage,enemyData.fireRate,
-                enemyData.animator,_playerIDamageable,enemyData.escapeRange,enemyData.fireRange,enemyData.attackCooldown);
+                enemyData.animator,_playerIDamageable,enemyData.fireRange,enemyData.escapeRange,enemyData.attackCooldown);
         }
         
         private RangeEnemy CreateRangeEnemy(RangeEnemyData enemyData) {
             return new RangeEnemy(enemyData.speed,enemyData.damage,enemyData.fireRate,
-                enemyData.animator,_playerIDamageable,enemyData.escapeRange,enemyData.fireRange,enemyData.attackCooldown);
+                enemyData.animator,_playerIDamageable,enemyData.fireRange,enemyData.escapeRange,enemyData.attackCooldown);
         }
         
         private MageEnemy CreateMageEnemy(MageEnemyData enemyData) {

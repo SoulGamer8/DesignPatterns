@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Nevermindever.Factory.Enemy.Data {
-    [CreateAssetMenu(fileName = "MageEnemyData", menuName = "Scriptable Objects/MageEnemyData")]
+    [CreateAssetMenu(fileName = "MageEnemyData", menuName = "Scriptable Objects/Factory/MageEnemyData")]
     public class MageEnemyData : EnemyData {
         public int maxMana;
         public int manaRegen;
