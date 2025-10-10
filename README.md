@@ -36,7 +36,7 @@ Currently showcasing **2 / 22(Or maybe more Idk yet)** design patterns.
 If you’re learning or teaching design patterns, check out:
 - [Refactoring.Guru – Design Patterns](https://refactoring.guru/design-patterns)
 - [Game Programming Patterns](https://gameprogrammingpatterns.com/)
-- [Unity Docs](https://docs.unity3d.com/)
+- [Unity Docs](https://unity.com/resources/level-up-your-code-with-game-programming-patterns)
 
 ---
 
