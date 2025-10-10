@@ -19,8 +19,7 @@ Currently showcasing **2 / 22(Or maybe more Idk yet)** design patterns.
 
 | 🧩 Pattern | 📄 Article | 📁 Folder |
 |:------------|:------------|:------------|
-| Factory / Abstract Factory Pattern | [Medium Article](#) | `Assets/Creational Pattern/[Factory](DesignPatterns/Assets/Creational Pattern
-/AbstractFactoryExample/)/Abstract Factory` |
+| Factory / Abstract Factory Pattern | [Medium Article](#) | `Assets/Creational Pattern/[Factory](#DesignPatterns/Assets/Creational Pattern/AbstractFactoryExample/) /Abstract Factory` |
 ---
 
 ## 🧱 Design Patterns Coming Soon
