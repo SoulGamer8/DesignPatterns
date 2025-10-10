@@ -22,12 +22,12 @@ namespace Nevermindever.AbstractFactory.Enemy.Managers {
             _enemyAbstractFactory.RegisterFactory<MeleeEnemyData>(new MeleeEnemyFactory(_prefab, playerTransform, playerIDamageable));
             _enemyAbstractFactory.RegisterFactory<RangeEnemyData>(new RangeEnemyFactory(_prefab, playerTransform, playerIDamageable));
             _enemyAbstractFactory.RegisterFactory<MageEnemyData>(new MageEnemyFactory(_prefab, playerTransform, playerIDamageable));
+            _enemyAbstractFactory.RegisterFactory<NewCoolEnemyData>(new NewCoolEnemyFactory(_prefab, playerTransform, playerIDamageable));
         }
         
         public void SpawnEnemyAtRandomPosition(EnemyData data) {
             Vector2 randomSpawnPosition = new Vector2(
-                Random.Range(-8f, 8),
-                Random.Range(-5f, 5));
+                Random.Range(-8f, 8), Random.Range(-5f, 5));
             SpawnEnemy(data, randomSpawnPosition);
         }
         
