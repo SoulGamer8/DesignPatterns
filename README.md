@@ -19,7 +19,7 @@ Currently showcasing **2 / 22(Or maybe more Idk yet)** design patterns.
 
 | 🧩 Pattern | 📄 Article | 📁 Folder |
 |:------------|:------------|:------------|
-| Factory / Abstract Factory Pattern | [Medium Article](#) | `Assets/Creational Pattern/[Factory](#DesignPatterns/Assets/Creational Pattern/AbstractFactoryExample/) /Abstract Factory` |
+| Factory / Abstract Factory Pattern | [Medium Article](#) | [View Code](Assets/Creational%20Pattern/AbstractFactoryExample/) |
 ---
 
 ## 🧱 Design Patterns Coming Soon
@@ -43,7 +43,7 @@ If you’re learning or teaching design patterns, check out:
 ## 👨‍💻 Author
 **Anton Orekhov**  
 Unity / C# Game Developer  
-[Medium](#) • [LinkedIn](www.linkedin.com/in/anton-orekhov)
+[Medium](#) • [LinkedIn](https://www.linkedin.com/in/anton-orekhov)
 
 ---
 
