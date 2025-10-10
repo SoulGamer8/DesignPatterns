@@ -2,7 +2,7 @@
 
 > **Project built in Unity 6 / C#**
 
-Programming design patterns can be hard to understand — especially in the context of game development.  
+Programming design patterns can be hard to understand  especially in the context of game development.  
 This project is a **collection of practical, Unity-focused examples** of the most important design patterns in C#.  
 The goal is to help developers learn how to apply patterns directly in **real Unity projects**.
 
@@ -10,8 +10,8 @@ The goal is to help developers learn how to apply patterns directly in **real Un
 
 ## 📊 Project Progress
 
-**✅ 72% Complete**  
-Currently showcasing **2 / 22** design patterns.
+**✅ 9% Complete**  
+Currently showcasing **2 / 22(Or maybe more Idk yet)** design patterns.
 
 ---
 
@@ -41,7 +41,7 @@ If you’re learning or teaching design patterns, check out:
 ## 👨‍💻 Author
 **Anton Orekhov**  
 Unity / C# Game Developer  
-[Medium](#) • [LinkedIn](#)
+[Medium](#) • [LinkedIn](www.linkedin.com/in/anton-orekhov)
 
 ---
 
