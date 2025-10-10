@@ -26,8 +26,10 @@ Currently showcasing **2 / 22(Or maybe more Idk yet)** design patterns.
 
 | 🔜 Pattern | 📘 Type |
 |:-------------|:-------------|
-
-
+| Object Pool | Creational / Structural |
+| Singleton | Creational |
+| Observer | Behavioral |
+| Mediator | Behavioral |
 ---
 
 ## 📚 Learn More
@@ -41,7 +43,7 @@ If you’re learning or teaching design patterns, check out:
 ## 👨‍💻 Author
 **Anton Orekhov**  
 Unity / C# Game Developer  
-[Medium](#) • [LinkedIn](#www.linkedin.com/in/anton-orekhov)
+[Medium](#) • [LinkedIn](www.linkedin.com/in/anton-orekhov)
 
 ---
 
