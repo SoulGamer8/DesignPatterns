@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Nevermindever.ObjectPool.Player {
+namespace Nevermindever.Factory.Player {
     [RequireComponent(typeof(Rigidbody2D))]
     public class PlayerMoveController : MonoBehaviour {
         [SerializeField] private float speed = 5f;
