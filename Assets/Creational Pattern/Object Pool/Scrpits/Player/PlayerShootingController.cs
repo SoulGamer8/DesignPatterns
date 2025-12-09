@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Nevermindever.ObjectPool.Player {
-    public class PlayerShootingController : MonoBehaviour {
-        
+    public class PlayerShootingController : MonoBehaviour
+    {
+        public UnityEvent<Vector2> shootEvent;
         private bool _mouseDown = false;
         void Update() {
 
@@ -17,9 +19,10 @@ namespace Nevermindever.ObjectPool.Player {
                 _mouseDown = false;
             }
 
-            if (_mouseDown)
-            {
-                
+            if (_mouseDown) {
+                Debug.Log("Mouse down");
+                Vector2 mousePos = Input.mousePosition;
+                shootEvent?.Invoke(mousePos);
             }
 
         }
